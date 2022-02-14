@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "Montserrat", sans-serif;
+  }
+  .container {
+      margin-top: 4vh;
+      margin-left: 6vw;
+      margin-right: 6vw;
+  }
+  .logo {
+    position: absolute;
+    overflow: hidden;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    min-height: 15vh;
+    /* background-color: grey; */
+  }
+  .nav-links {
+    display: flex;
+    margin-left: 25vw;
+    margin-top: 3vh;
+    list-style: none;
+  }
+  .nav-links li {
+    position: relative;
+    padding-right: 6rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    /* background-color: red; */
+  }
+  .nav-links li::after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    /* padding-left: 6rem; */
+    background-color: rgb(88, 88, 230);
+    visibility: hidden;
+    transform: scaleX(0);
+    transform-origin: top left;
+    transition: all 0.3s ease-in-out 0s;
+  }
+  .nav-links li:hover {
+    color: rgb(62, 62, 221);
+    cursor: pointer;
+  }
+  .nav-links li:hover::after {
+    visibility: visible;
+    transform: scaleX(0.6);
+  }
+  .nav-right {
+    justify-self: flex-end;
+    /* margin-top: 2vh; */
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    font-weight: bold;
+    font-size: 0.8rem;
+  }
+  .rad-box {
+    padding: 17px;
+    padding-left: 34px;
+    padding-right: 25px;
+    border-radius: 25px 0 25px 25px;
+    margin-top: 5px;
+    color: white;
+    background-color: #f89941;
+  }
+  .body-sec {
+    margin-top: 10vh;
+    margin-left: 4vw;
+  }
+  .test-ovrs {
+    list-style: none;
+  }
+  .test-ovrs li {
+    margin-bottom: 7vh;
+  }
+  .test-name {
+    color: #2b9dfa;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  .test-desc {
+    font-size: small;
+    padding-top: 10px;
+  }
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20vh;
+    min-height: 20vh;
+    background-color: #f89941;
+    padding-left: 7vw;
+    padding-right: 7vw;
+  }
+  .social-media {
+    display: flex;
+    list-style: none;
+  }
+  .social-media li {
+    padding: 10px;
+    font-size: 1.2rem;
+  }
+  .social-media li > a {
+    text-decoration: none;
+    color: black;
+  }
