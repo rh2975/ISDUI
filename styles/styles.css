@@ -107,6 +107,10 @@
   .test-desc:hover {
     cursor: pointer;
   }
+  .take-a-tour:hover {
+    cursor: pointer;
+    color: #2b9dfa;
+  }
   .footer {
     /* position: absolute; */
     /* bottom: 0px; */
