@@ -20,13 +20,24 @@
             <nav>
                 <ul class="nav-links">
                     <li>Trends and Statistics</li>
+                    <li>File Requests</li>
                     <li>About Us</li>
                 </ul>
                 <span class="nav-right">
-                    <span><i class="fa fa-search" style="margin-right: 10px;"></i>LOG IN</span>
-                    <span class="rad-box">TAKE A MENTAL HEALTH TEST</span>
+                    <span><i class="fa fa-search" style="margin-right: 10px;"></i>
+                        <span class="avatar">JD</span>
+                    </span>
+                    <span class="notifi-box">
+                        Notifications
+                        <i class="fa fa-envelope" style="margin-left: 5px;"></i>
+                    </span>
                 </span>
             </nav>
+            <ul class="notifi-modal">
+                <li>VERIFIED REPORTS</li><hr>
+                <li>COUNSELING APPROVALS</li><hr>
+                <li>SUGGESTED MEDICATIONS</li><hr>
+            </ul>
         </section>
         <section class="body-sec">
             <span style="font-size: 1.6rem; font-weight: 500;">GENERAL QUESTIONNAIRE</span>
@@ -80,6 +91,26 @@
     </section>
     <script>
         document.querySelector(".year").innerHTML = new Date().getFullYear();
+        var notifiBox = document.querySelector(".notifi-box");
+        var notifiModal = document.querySelector(".notifi-modal");
+        var notifiModalPopped = false;
+        notifiBox.onclick = () => {
+            if(!notifiModalPopped) {
+                notifiModal.style.display = "block";
+                notifiModalPopped = true;
+            }
+            else {
+                notifiModal.style.display = "none";
+                notifiModalPopped = false;
+            }
+        }
+        const notiPopup = () => {
+            if(notifiModalPopped) {
+                notifiModal.style.display = "none";
+                notifiModalPopped = false;
+            }
+        }
+        document.body.addEventListener('click', notiPopup, true);
     </script>
 </body>
 </html>
