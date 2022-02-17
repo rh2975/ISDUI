@@ -23,7 +23,7 @@
                     <li>About Us</li>
                 </ul>
                 <span class="nav-right">
-                    <span><i class="fa fa-search" style="margin-right: 10px;"></i>LOG IN</span>
+                    <span><i class="fa fa-search" style="margin-right: 10px;"></i><span class="login-btn" onclick="document.getElementById('login-modal-id').style.display='block'">LOGIN</span></span>
                     <span class="rad-box">TAKE A MENTAL HEALTH TEST</span>
                 </span>
             </nav>
@@ -66,6 +66,28 @@
                 </li>
             </ul>
         </section>
+        <div id="login-modal-id" class="modal">
+            <form class="modal-content animate" action="./patient-home.html" method="post">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('login-modal-id').style.display='none'" class="close" title="Close Modal">&times;</span>
+                </div>
+      
+                <div class="login-container">
+                    <div style="display: flex; align-items: center; justify-content: center; font-size: 1.1rem; font-weight: bold;">LOGIN</div>
+                    <label><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="uname">
+      
+                    <label><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw">
+      
+                    <input type="submit" class="login-btn" value="Login" style="background: none; border: none; background-color: #ddd; margin-top: 8px; padding: 11px; border-radius: 10px; width: 100%;">
+                </div>
+      
+                <div class="login-container" style="background-color:#f1f1f1">
+                    <div style="display: flex; align-items: center; justify-content: center;"><span>No account? <a href="#"> Create one</a></span></div>
+                </div>
+            </form>
+        </div>
     </div>
     <section class="footer">
         <span><i class="fa fa-copyright"></i> Copyright <span class="year"></span> | How are you?</span>
