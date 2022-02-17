@@ -36,3 +36,9 @@ const notifPopup = (e) => {
     }
 }
 document.body.addEventListener('click', notifPopup, true);
+var loginModal = document.getElementById('login-modal-id');
+    window.onclick = function(event) {
+    if (event.target == loginModal) {
+        loginModal.style.display = "none";
+    }
+}
