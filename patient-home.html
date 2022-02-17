@@ -34,7 +34,7 @@
                 </span>
             </nav>
             <ul class="notifi-modal">
-                <li>VERIFIED REPORTS</li><hr>
+                <li onclick="window.location='./verified-reports.html'">VERIFIED REPORTS</li><hr>
                 <li>COUNSELING APPROVALS</li><hr>
                 <li>SUGGESTED MEDICATIONS</li><hr>
             </ul>
@@ -89,28 +89,6 @@
             </ul>
         </div>
     </section>
-    <script>
-        document.querySelector(".year").innerHTML = new Date().getFullYear();
-        var notifiBox = document.querySelector(".notifi-box");
-        var notifiModal = document.querySelector(".notifi-modal");
-        var notifiModalPopped = false;
-        notifiBox.onclick = () => {
-            if(!notifiModalPopped) {
-                notifiModal.style.display = "block";
-                notifiModalPopped = true;
-            }
-            else {
-                notifiModal.style.display = "none";
-                notifiModalPopped = false;
-            }
-        }
-        const notiPopup = () => {
-            if(notifiModalPopped) {
-                notifiModal.style.display = "none";
-                notifiModalPopped = false;
-            }
-        }
-        document.body.addEventListener('click', notiPopup, true);
-    </script>
+    <script src="./src/src.js"></script>
 </body>
 </html>

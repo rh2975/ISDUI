@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./styles/styles.css">
-    <title>DSM Questionnaire</title>
+    <title>Verified Reports</title>
 </head>
 <body>
     <div class="container">
@@ -33,24 +33,25 @@
                     </span>
                 </span>
             </nav>
+            <ul class="notifi-modal">
+                <li onclick="window.location='./verified-reports.html'">VERIFIED REPORTS</li><hr>
+                <li>COUNSELING APPROVALS</li><hr>
+                <li>SUGGESTED MEDICATIONS</li><hr>
+            </ul>
         </section>
-        <section class="que-sec">
-            <div class="tron">DSM Questionnaire</div>
-            <div class="test-steps">
-                <ul class="test-steps-ul">
-                    <li class="test-step-n"><span class="test-step-circ"></span><span>Test</span><span>Questions</span></li>
-                    <li class="test-step-n"><span class="test-step-circ"></span><span>Demographic</span><span>Information</span></li>
-                    <li class="test-step-n"><span class="test-step-circ active-step"></span><span>Your</span><span>Results</span></li>
-                </ul>
-            </div>
-            <div class="questions-container" style="position: relative;">
-                <div class="thankyou">Thank You!</div>
-                <div class="init-response">
-                    Your initial score and responses are forwarded to the psychiatrists team.<br>
-                    You would be suggested any help or specialists if needed.<br>
-                    Please keep an eye on your Notifications tab for any new updates.
+        <section class="body-sec">
+            <span style="font-size: 1.6rem; font-weight: 500;">VERIFIED REPORTS</span>
+            <hr style="margin-top: 2px; margin-bottom: 15px;">
+            <div class="review-card">
+                <span><b>Arlene Steward</b> reviewed your report</span><br>
+                <span style="font-size: 0.8rem;">On 2022-01-31, 15:00</span><br>
+                <button class="accordion">Suggested Psychiatrists</button>
+                <div class="panel">
+                    <ul class="panel-ul">
+                        <li>Marvin Steward</li><hr>
+                        <li>Kevin De Bruyne</li>
+                    </ul>
                 </div>
-                <a href="./patient-home.html" class="test-ques-submit-btn" style="text-decoration: none; bottom: -70px;"><i class="fa fa-angle-left"></i><span style="margin-left: 5px;">Back to Home</span></a>
             </div>
         </section>
     </div>
